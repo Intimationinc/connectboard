@@ -1,0 +1,25 @@
+go build/
+*.log
+*.out
+*.test
+bin/
+.env
+vendor/
+coverage.*
+
+# VSCode
+.vscode/
+
+# JetBrains (GoLand, IntelliJ)
+.idea/
+*.iml
+
+# Vim swap files
+*.swp
+
+# Mac OS files
+.DS_Store
+
+# Other editors
+*.sublime-workspace
+*.sublime-project
