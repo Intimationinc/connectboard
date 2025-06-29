@@ -1,0 +1,18 @@
+# Dockerfile.dev
+FROM golang:1.24-alpine
+
+WORKDIR /app
+
+# Install necessary tools
+RUN apk add --no-cache git curl bash 
+
+RUN go install github.com/air-verse/air@latest
+# Copy go mod first for layer caching
+COPY go.mod ./
+COPY go.sum ./
+RUN go mod download
+
+# Copy source
+COPY . .
+
+CMD ["air"]
