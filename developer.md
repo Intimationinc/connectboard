@@ -1,5 +1,14 @@
 ## For development we use
 
+## To Run the project in Docker
+
+```
+docker compose up
+# then run
+curl http://localhost:8080/ping # make sure port is not binded
+```
+
+
 ### Formatter: 
 gofmt : https://pkg.go.dev/cmd/gofmt
 
